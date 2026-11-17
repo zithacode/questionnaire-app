@@ -1,0 +1,18 @@
+
+<div class="container">
+  <h2 class="text-center m-4">Reoruce Api</h2>
+  <table class="table table-info table-striped">
+    <tr>
+      <th class="col-3">User Id</th>
+      <th class="col-3">User Name</th>
+      <th class="col-3">Email</th>
+      <th class="col-3">Company</th>
+    </tr>
+    <tr *ngFor="let data of data">
+      <td>{{data.id}}</td>
+      <td>{{data.username}}</td>
+      <td>{{data.email}}</td>
+      <td>{{data.company}}</td>
+    </tr>
+  </table>
+</div>

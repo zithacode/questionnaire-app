@@ -1,0 +1,60 @@
+<div class="container text-center">
+  <div class="text-info">Session Storage</div>
+  <div class="row m-4">
+    <div class="col-3">
+      <button class="btn btn-info" (click)="setSession()">Set session</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-info" (click)="getSession()">Get session</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-info" (click)="removeSession()">Remove session</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-info" (click)="clearSession()">Clear session</button>
+    </div>
+  </div>
+ 
+    <h6 class="alert alert-danger" *ngIf="sessionValue" role="banner">{{sessionValue}}</h6>
+  
+    <hr class="text-danger">
+
+     <div class="text-info">Local Storage</div>
+  <div class="row m-4">
+    <div class="col-3">
+      <button class="btn btn-success" (click)="setLocal()">Set local</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-success" (click)="getLocal()">Get local</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-success" (click)="removeLocal()">Remove local</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-success" (click)="clearLocal()">Clear local</button>
+    </div>
+  </div>
+ 
+    <h6 class="alert alert-secondary" *ngIf="localValue" role="banner">{{localValue}}</h6>
+
+    <hr>
+
+    
+     <div class="text-info">Cookie Storage</div>
+  <div class="row m-4">
+    <div class="col-3">
+      <button class="btn btn-danger" (click)="setCookie()">Set Cookie</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-danger" (click)="getCookie()">Get Cookie</button>
+    </div>
+    <div class="col-6">
+      <button class="btn btn-danger" (click)="removeCookie()">Remove Cookie</button>
+    </div>
+ 
+  </div>
+ 
+    <h6 class="alert alert-warning" *ngIf="cookieValue" role="banner">{{cookieValue}}</h6>
+
+  
+</div>

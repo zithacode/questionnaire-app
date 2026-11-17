@@ -1,0 +1,134 @@
+/* Modal Container */
+.modal {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  width: 90%;
+  max-width: 420px;
+  background: #ffffff;
+  color: #1f2937;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  font-family: system-ui, -apple-system, sans-serif;
+  animation: popIn 0.25s ease-out;
+}
+
+/* Dimmed & Blurred Background */
+.modal::backdrop {
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+/* Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px 0;
+}
+
+.badge {
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #111827;
+}
+.blurred {
+  filter: blur(10px);
+  pointer-events: none;
+  user-select: none;
+}
+.show-modal{
+  display: block;
+  height: fit-content;
+}
+body > *:not(dialog) {
+  transition: filter 0.25s ease;
+}
+
+/* Blur everything inside body EXCEPT the open dialog */
+body.blur-page > *:not(dialog) {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+/* Body */
+.modal-body {
+  padding: 12px 20px 20px;
+}
+
+.modal-body h3 {
+  margin: 0 0 8px;
+  font-size: 1.125rem;
+}
+
+.modal-body p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+/* Footer & Buttons */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 14px 20px;
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  border-radius: 0 0 12px 12px;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.btn-secondary:hover {
+  background: #d1d5db;
+}
+
+/* Entrance Animation */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

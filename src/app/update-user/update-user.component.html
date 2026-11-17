@@ -1,0 +1,46 @@
+
+
+<div class="container" [class.blurred]="showModal">
+  <app-reusable></app-reusable>
+  <form class=" w-75 m-4 mx-auto border border-secondary p-4 rounded" [formGroup]="updateUserForm" (submit)="onSubmit()">
+    <h2 class="text-center m-4 text-decoration-underline text-secondary">Update User</h2>
+    <hr>
+
+    <div class="form-group m-3">
+      <label class="form-label">Name</label><br>
+      <input type="text" class="form-control" placeholder="Enter name." formControlName="name">
+    </div>
+    <div class="form-group m-3">
+      <label class="form-label">Username</label><br>
+      <input type="text" class="form-control" placeholder="Enter username." formControlName="username">
+    </div>
+    <div class="form-group m-3">
+      <label class="form-label">Email</label><br>
+      <input type="email" class="form-control" placeholder="Enter email." formControlName="email">
+    </div>
+
+    <div class="text-center m-3">
+      <button class="btn btn-success btn-lg m-1" type="submit">Update</button>
+      <button class="btn btn-danger btn-lg m-1" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<!-- Trigger Button -->
+<!-- <button id="openBtn" class="btn-primary">Show Notification</button> -->
+
+<!-- Notification Modal -->
+<dialog [class.show-modal]="showModal" id="notificationModal" class="modal">
+  <div class="modal-header">
+    <span class="badge">Update notification</span>
+    <button (click)="closeModal()" id="closeIcon" class="close-btn" aria-label="Close">&times;</button>
+  </div>
+  
+  <div class="modal-body">
+    <p>user updated!</p>
+  </div>
+  
+  <div class="modal-footer">
+    <button (click)="closeModal()" id="dismissBtn" class="btn-secondary">Dismiss</button>
+  </div>
+</dialog>

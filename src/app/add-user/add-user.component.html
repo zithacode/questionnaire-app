@@ -1,0 +1,28 @@
+
+
+<div class="container">
+  <app-reusable></app-reusable>
+
+  <form class=" w-75 m-4 mx-auto border border-secondary p-4 rounded" [formGroup]="addUserReactiveForm" (submit)="ngOnSubmit()">
+    <h2 class="text-center m-4 text-decoration-underline text-secondary">Add New User</h2>
+    <hr>
+
+    <div class="form-group m-3">
+      <label class="form-label">Name</label><br>
+      <input type="text" class="form-control" placeholder="Enter name." formControlName="name">
+    </div>
+    <div class="form-group m-3">
+      <label class="form-label">Username</label><br>
+      <input type="text" class="form-control" placeholder="Enter username." formControlName="username">
+    </div>
+    <div class="form-group m-3">
+      <label class="form-label">Email</label><br>
+      <input type="email" class="form-control" placeholder="Enter email." formControlName="email">
+    </div>
+
+    <div class="text-center m-3">
+      <button class="btn btn-success btn-lg m1" type="submit">Add</button>
+      <button class="btn btn-danger btn-lg m-1" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>
